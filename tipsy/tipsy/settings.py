@@ -55,7 +55,9 @@ ROOT_URLCONF = 'tipsy.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',  # выносим base шаблон на уровень с manage.py
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
