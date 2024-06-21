@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} 
+    {{ title }} 
+{%endblock %} 
+
+{% block content %}
+<body>
+<h1>Тут реально пусто, но если ты нажмешь на кнопку ниже -)</h1><br><br>
+
+<button class="btn btn-success" style="display: block; margin: 0 auto;type="submit"
+onclick="window.location.href = '{% url 'about_main' %}'">Переход на Обо Мне
+</button>
+
+</body>
+{% endblock %}
