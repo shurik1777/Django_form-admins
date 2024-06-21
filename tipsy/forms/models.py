@@ -14,3 +14,14 @@ class Client(m.Model):
 
     def __str__(self):
         return self.name
+
+
+class Product(m.Model):
+    title = m.CharField(max_length=128)
+    content = m.TextField()
+    price = m.DecimalField(max_digits=64, decimal_places=2, default=0)
+    amount = m.PositiveIntegerField(default=0)
+    date = m.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Title: {self.title}, price: {self.price}, amount: {self.amount}"
