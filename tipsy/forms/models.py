@@ -22,6 +22,8 @@ class Product(m.Model):
     price = m.DecimalField(max_digits=64, decimal_places=2, default=0)
     amount = m.PositiveIntegerField(default=0)
     date = m.DateField(auto_now_add=True)
+    photo = m.ImageField(upload_to='product_photos/', blank=True, null=True)
+    # upload_to='products/photos/%Y/%m/%d' - такой строкой можно подгружать в разные директории от разных дат
 
     def __str__(self):
         return f"Title: {self.title}, price: {self.price}, amount: {self.amount}"
