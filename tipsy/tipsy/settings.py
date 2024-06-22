@@ -36,7 +36,7 @@ else:
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
-["127.0.0.1", "jajashu.pythonanywhere.com"]
+ALLOWED_HOSTS = ["127.0.0.1", "jajashu.pythonanywhere.com"]
 
 
 # Application definition
